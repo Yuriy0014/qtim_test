@@ -23,6 +23,12 @@ export interface UserCreateModel {
 }
 
 export class UserInputModel {
+    @ApiProperty({
+        example: 'YURL',
+        description: 'Login',
+        minLength: 5,
+        maxLength: 30,
+    })
     @IsNotEmpty()
     @IsString()
     @MinLength(3)
